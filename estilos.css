@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Mingzat&family=Mukta:wght@300&display=swap');
+*,*::after,*::before{
+  font-family: Mukta;
+}
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+div{
+  font-family: Mukta;
+  text-align: left;
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+  animation: bar .7s infinite ease,2s write1 steps(9),2s borrar1 steps(9) 2s,
+  2s write2 steps(9) 4s,2s borrar2 steps(9) 6s,
+  2s write3 steps(9) 8s;
+  overflow: hidden;
+  border-right: 1px solid black;
+}
+div::before{
+  animation: .1s contenido1 4s forwards,.1s contenido2 8s forwards;
+  content: "developer";
+}
+@keyframes write1 {
+  from{
+    width: 0ch;
+  }
+  to{
+    width: 130px;
+  }
+}
+@keyframes bar {
+  from{
+    border-right: 1px solid white;
+  }
+  to{
+    border-right: 1px solid black;
+  }
+}
+@keyframes borrar1 {
+  from{
+    width: 130px;
+  }
+  to{
+    width: 0ch;
+  }
+}
+@keyframes contenido1 {
+  from{
+    content:"developer";
+  }
+  to{
+    content:"designer";
+  }
+}
+@keyframes write2 {
+  from{
+    width: 0ch;
+  }
+  to{
+    width: 115px;
+  }
+}
+@keyframes borrar2 {
+  from{
+    width: 115px;
+  }
+  to{
+    width: 0ch;
+  }
+}
+@keyframes contenido2 {
+  from{
+    content:"designer";
+  }
+  to{
+    content:"engineer";
+  }
+}
+@keyframes write3 {
+  from{
+    width: 0ch;
+  }
+  to{
+    width: 105px;
+  }
+}
